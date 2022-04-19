@@ -39,14 +39,14 @@ $croma = get_option('cromatic');
 
 
          <!-- fetch menu -->
-        <nav id="croma-mobilenav" class="reveal-modal">
+        <div id="croma-mobilenav" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
             <a class="mobilenav-close cro_cust_bg close-reveal-modal"><i class="icon-remove"></i></a>
             <?php                       
                 if ( has_nav_menu('croma-primarynav' ) ) {
                     wp_nav_menu( array( 'container_class' => 'croma-mobilenavigation', 'theme_location' => 'croma-primarynav') );
                 }
             ?>
-        </nav>
+        </div>
 
         <?php if ($croma['cro_topb'] == 1) { ?>
         
@@ -82,7 +82,7 @@ $croma = get_option('cromatic');
 
                                 <nav id="croma-primarynav">
 
-                                    <div class="mobilemenupart" data-reveal-ajax="croma-mobilenav" data-reveal-id="croma-mobilenav" data-reveal><i class="icon-reorder"></i></div>
+                                    <div class="mobilemenupart" id="reveal-croma-mobilenav"><i class="icon-reorder"></i></div>
                             
                                     <?php wp_nav_menu( array( 'container_class' => 'croma-primarynav', 'theme_location' => 'croma-primarynav') ); ?>
 

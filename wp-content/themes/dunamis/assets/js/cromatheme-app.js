@@ -778,4 +778,8 @@ jQuery(document).ready(function($) {
     });
 
 
+    $(document).on('click', '#reveal-croma-mobilenav', function() {
+        $('#croma-mobilenav').foundation('reveal', 'open');
+    })
+
 });
